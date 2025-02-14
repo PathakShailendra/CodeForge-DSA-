@@ -1,27 +1,25 @@
 package Arrays;
 
 public class duplicateZeroes {
-    public void duplicateZeros(int[] arr) {
-        int n = arr.length;
-        int count = 0, i = 0;
-
-        // Count total number of elements including duplicate zeros
-        for (i = 0; i < n; i++) {
-            count++;
-            if (arr[i] == 0) count++;
+    public static void insert(int arr[], int i, int j){
+        if(j < arr.length){
+            arr[j] = arr[i];
         }
+    }
+    public void duplicateZeros(int[] arr) {
+        int zeros = 0;
+        for(int e : arr)if(e == 0)zeros++;
+        int i = arr.length-1;
+        int j = arr.length+zeros-1;
 
-        int j = count - 1; // Position in modified array
-
-        // Traverse from end and shift elements
-        for (i = n - 1; i >= 0; i--) {
-            if (j < n) arr[j] = arr[i]; // Copy element if within bounds
+        while(i != j){
+            insert(arr, i, j);
             j--;
-
-            if (arr[i] == 0) { // If zero, add duplicate zero
-                if (j < n) arr[j] = 0;
+            if(arr[i] == 0){
+                insert(arr, i, j);
                 j--;
             }
+            i--;
         }
     }
 }
