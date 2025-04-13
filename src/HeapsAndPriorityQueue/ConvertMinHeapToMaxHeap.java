@@ -1,4 +1,4 @@
-package Heaps;
+package HeapsAndPriorityQueue;
 
 public class ConvertMinHeapToMaxHeap {
     static int []arr = new int[6];

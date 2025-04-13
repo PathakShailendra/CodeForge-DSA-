@@ -1,4 +1,4 @@
-package Heaps;
+package HeapsAndPriorityQueue;
 
 public class Heap {
     int arr[] = new int[100];
