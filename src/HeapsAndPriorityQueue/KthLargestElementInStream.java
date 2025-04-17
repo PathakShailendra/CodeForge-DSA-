@@ -2,11 +2,11 @@ package HeapsAndPriorityQueue;
 
 import java.util.PriorityQueue;
 
-class KthLargest {
+class KthLargestElementInStream {
 
     PriorityQueue<Integer> pq;
     int k;
-    public KthLargest(int k, int[] nums) {
+    public KthLargestElementInStream(int k, int[] nums) {
         this.k = k;
         pq = new PriorityQueue<>(k);
         for(int num : nums){
