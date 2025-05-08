@@ -1,27 +1,23 @@
 package BinarySearchTrees;
 
 public class CeilInBST {
-    private int ceil = -1;
+    public static int ceil(Node root, int x) {
+        int ans = -1;
 
-    public void helper(Node root, int x) {
-        if(root == null) return;
-        if(root.data == x) {
-            ceil = root.data;
-            return;
+        while (root != null) {
+            if (root.data == x) {
+                return root.data;
+            }
+
+            if (root.data > x) {
+                ans = root.data;     // possible ceil
+                root = root.left;    // try to find smaller valid value
+            } else {
+                root = root.right;
+            }
         }
-        if(root.data > x) {
-            ceil = root.data;
-            helper(root.left, x);
-        } else {
-            helper(root.right, x);
-        }
+
+        return ans;
     }
 
-
-    int findCeil(Node root, int key) {
-        if (root == null) return -1;
-        // Code here
-        helper(root, key);
-        return ceil;
-    }
 }
