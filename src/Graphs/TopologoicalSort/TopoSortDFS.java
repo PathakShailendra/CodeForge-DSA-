@@ -1,4 +1,4 @@
-package Graphs;
+package Graphs.TopologoicalSort;
 
 import java.util.*;
 
