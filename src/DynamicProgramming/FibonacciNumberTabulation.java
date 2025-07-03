@@ -1,7 +1,7 @@
 package DynamicProgramming;
 
 import java.util.*;
-class TUF{
+class FibonacciNumberTabulation{
     public static void main(String args[]) {
 
         int n=5;
