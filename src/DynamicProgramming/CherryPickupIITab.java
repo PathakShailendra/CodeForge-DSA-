@@ -1,5 +1,7 @@
 package DynamicProgramming;
 
+import java.util.Arrays;
+
 public class CherryPickupIITab {
     int[][][] dp;
     int rows, cols;
