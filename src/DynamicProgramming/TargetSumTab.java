@@ -14,12 +14,12 @@ public class TargetSumTab {
 
         dp[0][0] = 1;
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             for (int s = 0; s <= sum; s++) {
-                if (nums[i - 1] <= s) {
-                    dp[i][s] = dp[i - 1][s] + dp[i - 1][s - nums[i - 1]];
-                } else {
-                    dp[i][s] = dp[i - 1][s];
+                dp[i + 1][s] = dp[i][s];
+
+                if (s >= nums[i]) {
+                    dp[i + 1][s] += dp[i][s - nums[i]];
                 }
             }
         }
