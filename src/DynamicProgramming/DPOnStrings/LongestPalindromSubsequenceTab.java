@@ -18,7 +18,6 @@ public class LongestPalindromSubsequenceTab {
                 }
             }
         }
-
         return dp[0][n - 1];
     }
 }
