@@ -2,7 +2,7 @@ package DynamicProgramming.DpOnStocks;
 
 import java.util.Arrays;
 
-public record BestTimeToBuyAndSellStock() {
+public class BestTimeToBuyAndSellStock {
     private int solve(int i, int canBuy, int[] prices, int[][] dp) {
         if (i == prices.length) return 0;
 
